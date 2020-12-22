@@ -1,5 +1,5 @@
 ---
-date: 2020-12-19
+date: 2020-12-18
 title: "람다식"
 categories: Java
 tags: Java
