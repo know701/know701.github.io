@@ -4,8 +4,8 @@ title: "collection"
 categories: Java
 tags: Java
 # 목차
-toc: false  
-toc_sticky: false 
+toc: true
+toc_sticky: true
 ---
 
 
