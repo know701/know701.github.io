@@ -1,11 +1,11 @@
 ---
-date: 2020-12-18
+date: 2020-12-19
 title: "collection"
 categories: Java
 tags: Java
 # 목차
-toc: true  
-toc_sticky: true 
+toc: false  
+toc_sticky: false 
 ---
 
 
