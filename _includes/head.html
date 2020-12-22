@@ -1,6 +1,8 @@
 <meta charset="utf-8">
 
 {% include seo.html %}
+<link rel="shortcut icon" type="image/x-icon" href="/assets/favicon/f0.png?" />
+<link id="favicon" rel="icon" href="#" type="image/x-icon"/>
 
 <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
@@ -9,6 +11,19 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<script>
+  //favicon
+  var faviconRoute = '/assets/favicon/';
+  var faviconNames = ['f0.png', 'f1.png', 'f2.png', 'f3.png', 'f4.png',
+                        'f5.png', 'f6.png', 'f7.png', 'f8.png', 'f9.png']; 
+  var idx = 0;
+  setInterval(func, 175);
+  function func() {
+      document.querySelector("#favicon").setAttribute('href', faviconRoute + faviconNames[idx++]);
+      idx %= faviconNames.length;
+  }
 </script>
 
 <!-- For all browsers -->
