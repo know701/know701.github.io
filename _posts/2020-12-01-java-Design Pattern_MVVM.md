@@ -1,5 +1,5 @@
 ---
-date: 2020-12-05
+date: 2020-12-01
 title: "MVVM"
 categories: Java
 tags: Java

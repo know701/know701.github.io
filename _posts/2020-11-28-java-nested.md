@@ -1,5 +1,5 @@
 ---
-date: 2020-12-05
+date: 2020-11-28
 title: "nested class,interface"
 categories: Java
 tags: Java
