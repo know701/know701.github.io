@@ -88,7 +88,7 @@ public class className implements AutoCloseable {}
 
 - try-with-resources 를 사용하기 위해서는 리소스 객체는 java.lang.AutoCloseable 인터페이스를 구현하고 있어야 함.
 
-# 예외 떠넘기기
+## 예외 떠넘기기
 - 메소드 내부에서 예외가 발생할 수 있는 코드를 작성할 대 try-catch 블록으로 예외를 처리하는것이 기본이자만 경우에 따라 메소드를 호출한곳으로 예외를 넘길 수 있음.
 
 ```java
@@ -97,11 +97,11 @@ public class className implements AutoCloseable {}
 ```
 - throws 키워드가 붙어있는 메소드는 반드시 try 블록 내에서 호출되어야 하며, catch블록에서 넘겨받은 예외를 처리 해야함.
 
-# 사용자 정의 예외와 예외 발생
+## 사용자 정의 예외와 예외 발생
 - 애플리케이션 서비스와 관련된 예외를 애플리케이션 예외(Application Exception)라고 함.
   - 애플리케이션 예외는 개발자가 직접 정의해서 만들어야 하므로 사용자 정의 예외라고도 함.
 
-## 사용자 정의 예외 클래스 선언
+### 사용자 정의 예외 클래스 선언
 - 사용자 정의 예외 클래스는 컴파일러가 체크하는 일반예외로 선언할 수도 있고, 컴파일러가 체크하지않는 실행예외로 선언할 수도있음.
   - 일반 예외로 선언할 경우 Exception을 상속, 실행 예외로 선언할 경우 RuntimeException 을 상속
 ```java
