@@ -654,5 +654,128 @@ TreeMap<K,V> treemap = new TreeMap<K, V>();
   int | compare(T o1, T 02) | o1과 o2가 동등하다면 0을 리턴, o1이 o2보다 앞에 오게 하라면 음수를 리턴, o1이 o2보다 뒤에 오게 하려면 양수를 리턴
   
   ```java
+  public class DescendingComparator implements Comparator<Person> {
 
+	@Override
+    public int compare(Person o1, Person o2) {
+      if(o1.getAge() < o2.getAge()) return -1;
+      else if(o1.getAge() == o2.getAge()) return 0;
+      else return 1;
+    }
+  }
+   ```
+  ```java
+  public static void main(String[] args) {
+		TreeSet<Person> treeSet = new TreeSet<Person>(new DescendingComparator());
+			//저장 시 나이를 기준으로 내림차순 정렬됨.
+			treeSet.add(new Person("홍길동", 30));
+			treeSet.add(new Person("고길동", 50));
+			treeSet.add(new Person("마이콜", 20));
+			
+			Iterator<Person> iterator = treeSet.iterator();
+			while(iterator.hasNext()) {
+				Person person = iterator.next();
+				System.out.println(person.getName() + person.getAge());
+			}
+	}
   ```
+
+## LIFO와 FIFO 컬렉션
+- Last In First Out, First In First Out
+  - 후입선출(LIFO), 선입선출(FIFO)
+
+#### Stack 클래스
+```java
+Stack<E> stack = new Stack<>();
+```
+- 특징
+  - 후입선출(LIFO) 구조
+  - JVM 스택 메모리
+- 주요 메소드
+
+리턴타입 | 메소드 | 설명
+E | push(E item) | 주어진 객체를 스택에 넣음
+E | peek() | 스택의 맨위 객체를 가져옴. 객체를 스택에서 제거하지 않음
+E | pop() | 스택의 맨위 객체를 가져옴. 객체를 스택에서 제거함
+
+```java
+public class Coin {
+	private int value;
+
+	public int getValue() {
+		return value;
+	}
+
+	public Coin(int value) {
+		super();
+		this.value = value;
+	}
+}
+```
+```java
+public static void main(String[] args) {
+  Stack<Coin> coin = new Stack<Coin>();
+  
+  coin.push(new Coin(100));
+  coin.push(new Coin(50));
+  coin.push(new Coin(10));
+  coin.push(new Coin(500));
+  coin.push(new Coin(300));
+  
+  while(!coin.isEmpty()) {
+    Coin coins = coin.pop();
+    System.out.println(coins.getValue());
+  }
+}
+```
+
+#### Queue 클래스
+```java
+Queue queue = new LinkedList();
+```
+- 특징
+  - 선입선출(FIFO) 구조
+  - 작업큐, 메시지큐 등에 사용
+  - 구현클래스 : LinkedList
+- 주요 메소드
+리턴타입 | 메소드 | 설명
+boolean | offer(E e) | 주어진 객체를 넣음
+E | peek() | 객체 하나를 가져옴. 객체를 큐에서 제거하지않음
+E | poll() | 객체 하나를 가져옴. 객체를 큐에서 제거함
+ 
+```java
+public static void main(String[] args) {
+  Queue<Coin> coins = new LinkedList<Coin>();
+  coins.offer(new Coin(100));
+  coins.offer(new Coin(500));
+  coins.offer(new Coin(50));
+  coins.offer(new Coin(300));	
+
+  while(!coins.isEmpty()) {
+    Coin coin = coins.poll();
+    System.out.println(coin.getValue());
+  }	
+}
+```
+
+### 동기화된 컬렉션
+**비동기화 된 컬렉션을 동기화된 컬렉션으로 래핑**
+비동기화된 컬렉션을 멀티스레드 환경에서 사용해야 할 경우 동기화된 컬렉션으로 래핑하여 사용하는것이 안전
+
+**List 컬렉션**
+```java
+List<T> list = Collections.synchronizedList(new ArrayList<T>());
+```
+- 비동기화된 컬렉션인 ArrayList 를 Collections 클래스의 정적메소드를 통해서 래핑시켜주면 Thread Safe 한 컬렉션을 만들수 있음.
+
+**Set 컬렉션**
+```java
+Set<E> set = Collections.synchronizedSet(new HashSet<E>);
+```
+- 비동기화된 컬렉션인 HashSet을 Collections 클래스의 정적메소드를 통해서 래핑시켜주면 Thread Safe 하게 만들 수 있음.
+
+**Map 컬렉션**
+```java
+Map<K,V> map = Collections.synchronizedMap(new HashMap<K,V>);
+```
+- 비동기화된 컬렉션인 HashMap을 Collections 클래스의 정적메소드를 통해서 래핑시켜주면 Thread Safe 하게 만들 수 있음.
