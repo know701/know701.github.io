@@ -2,7 +2,6 @@
 date: 2020-11-27
 title: "상속"
 categories: Java
-tags: Java
 # 목차
 toc: true  
 toc_sticky: true 

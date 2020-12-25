@@ -2,7 +2,6 @@
 date: 2020-12-18
 title: "람다식"
 categories: Java
-tags: Java
 # 목차
 toc: true  
 toc_sticky: true 

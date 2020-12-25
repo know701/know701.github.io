@@ -2,7 +2,6 @@
 date: 2020-11-28
 title: "nested class,interface"
 categories: Java
-tags: Java
 # 목차
 toc: true
 toc_sticky: true 

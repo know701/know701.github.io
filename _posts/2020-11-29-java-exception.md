@@ -2,7 +2,6 @@
 date: 2020-11-29
 title: "Exception"
 categories: Java
-tags: Java
 # 목차
 toc: true  
 toc_sticky: true 

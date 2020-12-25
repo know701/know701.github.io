@@ -2,7 +2,6 @@
 date: 2020-12-15
 title: "Generic"
 categories: Java
-tags: Java
 # 목차
 toc: true  
 toc_sticky: true 
