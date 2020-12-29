@@ -26,3 +26,12 @@ toc_sticky: true
   ```
   INSERT INTO '테이블명(컬럼명)' VALUES(지정한 컬럼의 값);
   ```
+
+  
+- ORA-01031
+  - VIEW 생성 시 권한 불충분으로 나는 에러
+  - 해결방법
+  ```
+  --DBA 권한을 가진 계정 접속 후 VIEW 생성 권한 부여하면 됨.
+  GRANT CREATE VIEW TO '계정 이름'
+  ```
