@@ -7,7 +7,6 @@ toc: true
 toc_sticky: true 
 ---
 
-{% raw %}
 # 람다식
 - 함수적 프로그래밍
 - 자바 8부터 함수적 프로그래밍 지원
@@ -503,4 +502,3 @@ public interface Comparator<T>{
 	}
 }
 ```
-{% endraw %}

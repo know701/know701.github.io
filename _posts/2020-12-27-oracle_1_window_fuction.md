@@ -6,6 +6,7 @@ categories: oracle sql
 toc: true  
 toc_sticky: true 
 ---
+
 ### Function
 #### 문자열 함수
 

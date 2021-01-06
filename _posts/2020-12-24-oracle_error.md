@@ -6,6 +6,9 @@ categories: oracle sql
 toc: true  
 toc_sticky: true 
 ---
+
+[ORACLE 에러 사이트] - 공식문서
+
 # ERROR
 - ORA - 01950 : 테이블 스페이스에 대한 권한이 없어 발생하는 문제
   - 해결방법
@@ -35,3 +38,6 @@ toc_sticky: true
   --DBA 권한을 가진 계정 접속 후 VIEW 생성 권한 부여하면 됨.
   GRANT CREATE VIEW TO '계정 이름'
   ```
+
+
+[ORACLE 에러 사이트]: https://www.oraexcel.com/resources/lang-ko
