@@ -1,7 +1,7 @@
 ---
 date: 2021-01-04
 title: "oracle/tomcat port change"
-categories: java 
+categories: sql
 # 목차
 toc: true  
 toc_sticky: true 

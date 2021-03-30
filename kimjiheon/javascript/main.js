@@ -20,7 +20,7 @@ window.onload = function () {
     function startPage() {
         setTimeout(() => {
             $('#page-start').fadeOut(2000, 'swing');
-        }, 8000);
+        }, 100);
     }
 }
 
